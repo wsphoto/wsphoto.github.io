@@ -32,8 +32,14 @@
     float: left;
 }
 
-.slidetextpf{
-		color:black;
+.slidepf p{
+  color: black;
+  margin: 2em;
+}
+
+.slidecontainer{
+  width:75%;
+  height:40%;
 }
 
 .slideimage{

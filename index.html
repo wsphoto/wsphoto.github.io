@@ -13,18 +13,37 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<script src="assets/js/jquery.min.js"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-loading-0 is-loading-1 is-loading-2">
-
+		<script>
+		$('body').css('display', 'none');
+		$(document).ready(function(){
+			$('body').fadeIn();
+			$('.link').on('click', function(event){
+				var thetarget = this.getAttribute('target')
+				if(thetarget != "_blank"){
+					var thehref = this.getAttribute('href')
+					event.preventDefault();
+					$('body').fadeOut(function(){
+						window.location = thehref
+					});
+				}
+			});
+		});
+		setTimeout(function(){
+			$('body').fadeIn();
+		},1000)
+	</script>
 		<!-- Main -->
 			<div id="main">
 
 				<!-- Header -->
 					<header id="header">
-						<h1 style="font-family:typewriter">W<sup>2</sup> Photography</h1>
-							<center><li><a href="about.html"><span class="label">About/Contact</span></li>
-							<li><a href="portfolio.html"><span class="label">Portfolio</span></li>
+						<center><h1 style="font-family:typewriter">W<sup>2</sup> Photography</h1></center>
+							<center><li><a href="about.html" class="link"><span class="label">About/Contact</span></li>
+							<li><a href="portfolio.html" class="link"><span class="label">Portfolio</span></li>
 							<li><a href="mailto:wjwalcher@gmail.com">Email:&nbsp<span class="icon fa-envelope-o"></span></a></li>
 						</ul>
 					</header>
@@ -32,31 +51,19 @@
 				<!-- Thumbnail -->
 					<section id="thumbnails">
 						<article>
+							<a class="thumbnail" href="images/fulls/19.jpg"><img src="images/thumbs/19.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/22.jpg"><img src="images/thumbs/22.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/23.jpg"><img src="images/thumbs/23.jpg" alt="" /></a>
+						</article>
+						<article>
 							<a class="thumbnail" href="images/fulls/02.jpg" data-position="left center"><img src="images/thumbs/02.jpg" alt="" /></a>
 						</article>
 						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="" /></a>
-						</article>
-						<article>
 							<a class="thumbnail" href="images/fulls/03.jpg" data-position="top center"><img src="images/thumbs/03.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/05.jpg" data-position="top center"><img src="images/thumbs/05.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/07.jpg"><img src="images/thumbs/07.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/08.jpg"><img src="images/thumbs/08.jpg" alt="" /></a>
-						</article>
-						<article>
-							<a class="thumbnail" href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" /></a>
 						</article>
 						<article>
 							<a class="thumbnail" href="images/fulls/10.jpg"><img src="images/thumbs/10.jpg" alt="" /></a>
@@ -66,6 +73,66 @@
 						</article>
 						<article>
 							<a class="thumbnail" href="images/fulls/12.jpg"><img src="images/thumbs/12.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/13.jpg"><img src="images/thumbs/13.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/14.jpg"><img src="images/thumbs/14.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/15.jpg"><img src="images/thumbs/15.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/16.jpg"><img src="images/thumbs/16.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/20.jpg"><img src="images/thumbs/20.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/21.jpg"><img src="images/thumbs/21.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/24.jpg"><img src="images/thumbs/24.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/25.jpg"><img src="images/thumbs/25.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/26.jpg"><img src="images/thumbs/26.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/27.jpg"><img src="images/thumbs/27.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/28.jpg"><img src="images/thumbs/28.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/29.jpg"><img src="images/thumbs/29.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/30.jpg"><img src="images/thumbs/30.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/31.jpg"><img src="images/thumbs/31.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/32.jpg"><img src="images/thumbs/32.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/33.jpg"><img src="images/thumbs/33.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/34.jpg"><img src="images/thumbs/34.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/35.jpg"><img src="images/thumbs/35.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/36.jpg"><img src="images/thumbs/36.jpg" alt="" /></a>
+						</article>
+						<article>
+							<a class="thumbnail" href="images/fulls/37.jpg"><img src="images/thumbs/37.jpg" alt="" /></a>
 						</article>
 					</section>
 
@@ -77,9 +144,8 @@
 					</footer>
 
 			</div>
-
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+
 			<script src="assets/js/skel.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>

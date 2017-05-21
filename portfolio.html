@@ -5,46 +5,73 @@
 <head>
 	<link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/w3.css">
+	<script src="assets/js/jquery.min.js"></script>
 </head>
 
 <body>
+	<script>
+	$('body').css('display', 'none');
+	$(document).ready(function(){
+		$('body').fadeIn();
+		$('a').on('click', function(event){
+			var thetarget = this.getAttribute('target')
+			if(thetarget != "_blank"){
+				var thehref = this.getAttribute('href')
+				event.preventDefault();
+				$('body').fadeOut(function(){
+					window.location = thehref
+				});
+			}
+		});
+	});
+	setTimeout(function(){
+		$('body').fadeIn();
+	},1000)
+</script>
+
   <center><h1 style="font-family:typewriter;margin-top:1em">Portfolio</h1></center>
-  <div class="slidepf"><img class="slideimage" src="images/fulls/grooves.jpg"><br>
-    <center><p class="slidetextpf"><h4><b>Long Exposure - Neon Grooves</b></h4><br>
-      As a lover of music, I collect records in my spare time. I love the look, feel, and sense of ownership that come along with vinyl records. <br>
+	<button class="w3-button" style="margin-left:20%;margin-bottom:2em;float:left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button" style="margin-right:20%;margin-bottom:2em;float:right" onclick="plusDivs(+1)">&#10095;</button>
+	<!-- <div class="slidecontainer"> -->
+		<div class="slidepf"><img class="slideimage" src="images/fulls/grooves.jpg"><br>
+    <center><h4><b>Long Exposure - Neon Grooves</b></h4>
+			<p>As a lover of music, I collect records in my spare time. I love the look, feel, and sense of ownership that come along with vinyl records. <br>
       You can usually find me playing a record and relaxing to it in my room at the end of every day. That's where my idea for this photo sparked. <br>
       While I was listening to a record I thought - wouldn't it be cool if I could capture the motion of a record spinning with light? The result is this piece, called Neon Grooves. <br>
       I managed to capture the same grooves and texture of a record, while capturing the spinnning motion of a disc on a turntable.
     </p></center>
-  </div>
+		<!-- </div> -->
+	</div>
   <div class="slidepf"><img class="slideimage" src="images/fulls/flag.jpg"><br>
-    <center><p class="slidetextpf"><h4><b>Double Exposure - Star Spangled</b></h4><br>
-      As I watched a flag wave in the wind, I contemplated what this symbol means to so many. <br>
+    <center><h4><b>Double Exposure - Star Spangled</b></h4>
+      <p>As I watched a flag wave in the wind, I contemplated what this symbol means to so many. <br>
       I wanted this image to convey the American mantra of “E Pluribus Unum,” or, “out of many, one.” In order to do this the best, I chose to make the image a double exposure.<br>
       In our divided nation, this has been an important thing to remember--we are all united under the same flag regardless of our race, creed, or background. <br>
       By showing the flag in multiple stages in one piece it represents that it takes all of us, regardless of our difference, to make a whole nation.
     </p></center>
   </div>
   <div class="slidepf"><img class="slideimage" src="images/fulls/control.jpg"><br>
-    <center><p class="slidetextpf"><h4><b>Low Key - In Control</b></h4><br>
-      In my free time outside of photography, I enjoy occassionally DJ-ing for fun!<br>
+    <center><h4><b>Low Key - In Control</b></h4>
+      <p>In my free time outside of photography, I enjoy occassionally DJ-ing for fun!<br>
       This picture was an attempt to capture the intricacies of a DJ controller that might go unnoticed by someone unfamiliar with the craft. <br>
       I chose to make the image low key because I felt that it added a sense of focus to the piece that it did not have in color.
     </p></center>
   </div>
   <div class="slidepf"><img class="slideimagebokeh" src="images/fulls/bokehglass.jpg"><br>
-    <center><p class="slidetextpf"><h4><b>Bokeh - Libation</b></h4><br>
-    In this image, I attempted to capture a feeling of emptiness. <br>
+    <center><h4><b>Bokeh - Libation</b></h4>
+		<p>In this image, I attempted to capture a feeling of emptiness. <br>
     The use of bokeh in the image allowed me to contrast the warmth and fullness of light with the void of the glass. <br>
     In our lives, we often find ourselves chaasing after what we deem will make us happy, when in reality, it will not. <br>
     Instead of being thankful for the things we have, we can often lose sight of what really matters in life, and find ourselves with an empty glass. <br>
     This image serves as a reminder to stop and be thankful.
     </p></center>
   </div>
-  <div class="slidepf"><img class="slideimage" src="images/fulls/04.jpg"></div>
-  <div class="slidepf"><img class="slideimage" src="images/fulls/04.jpg"></div>
-  <button class="w3-button" style="margin-left:20%;float:left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button" style="margin-right:20%;float:right" onclick="plusDivs(+1)">&#10095;</button>
+  <div class="slidepf"><img class="slideimage" src="images/fulls/joiner.jpg">
+  	<center><h4><b>Joiner</b></h4>
+	</div>
+  <div class="slidepf"><img class="slideimage" src="images/fulls/webgif.gif">
+		<center><h4><b>GIF</b></h4>
+	</div>
 
 
 </body>
